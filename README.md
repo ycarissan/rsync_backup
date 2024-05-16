@@ -26,11 +26,11 @@ Edit the `to_exclude.txt` file with your favorite editor and modify it according
 
 ```crontab -e```
 
-#### Some examples of crontabs (see crontab doc for further info or here : [Crontab Guru](https://crontab.guru/examples.html) ):
-##### Runs every week at 5am
-```0 5 * * 1 /home/yannick/rsync_backup/backup.sh ```
+#### Some examples of crontabs (see crontab doc for further info or [here](https://crontab.guru/examples.html) or [here](https://quickref.me/cron.html) ):
+##### Runs every week at 5am with no output or error file
+```0 5 * * 1 /home/yannick/rsync_backup/backup.sh > /dev/null 2>&1```
 
-##### Runs every hour and sends notification
-```@hourly env DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus /home/yannick/rsync_backup/backup.sh ```
+##### Runs every hour and sends notification with log and error files
+```@hourly env DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus /home/yannick/rsync_backup/backup.sh >> /home/yannick/rsync_backup/log 2>> /home/yannick/rsync_backup/err```
 
 ### Chill

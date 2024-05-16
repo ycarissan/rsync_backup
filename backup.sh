@@ -3,8 +3,9 @@
 SOURCE=/home/yannick/
 # Where to store the incremental backups
 DESTBASE=/media/save/yannick@DragonFly
+FILELIST_TO_EXCLUDE=/home/yannick/rsync_backup/toexclude.txt
 
-OPTS="--exclude-from /home/yannick/rsync_backup/toexclude.txt"
+OPTS="--exclude-from ${FILELIST_TO_EXCLUDE}"
 
 echo "Backup start $(date)"
 

@@ -3,6 +3,7 @@
 SOURCE=/home/yannick/
 # Where to store the incremental backups
 DESTBASE=/media/save/yannick@DragonFly
+# The file that contains a list of directories or filenames to exclude from the backup
 FILELIST_TO_EXCLUDE=/home/yannick/rsync_backup/toexclude.txt
 
 OPTS="--exclude-from ${FILELIST_TO_EXCLUDE}"

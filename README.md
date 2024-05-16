@@ -11,6 +11,11 @@ creates a directory rsync_backup in the current directory.
 
 makes the script executable.
 
+### Edit the backup.sh script (6 first lines)
+
+The first lines of the script allow for tuning the script according to your need (what you want to backup, where and what you want to exclude).
+Edit these lines using the values as template.
+
 ### Edit the to_exclude.txt file to your liking
 
 ``` cd rsync_backup ```

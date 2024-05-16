@@ -33,4 +33,16 @@ Edit the `to_exclude.txt` file with your favorite editor and modify it according
 ##### Runs every hour and sends notification with log and error files
 ```@hourly env DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus /home/yannick/rsync_backup/backup.sh >> /home/yannick/rsync_backup/log 2>> /home/yannick/rsync_backup/err```
 
-### Chill
+### BACKUPS
+In the destination folder, directories are created :
+
+```
+2024-05-06-18:00:01
+2024-05-06-19:00:01
+2024-05-13-09:00:01
+2024-05-13-10:00:01
+2024-05-16-09:00:02
+2024-05-16-10:00:01
+```
+
+These directories contain the version of all files at the given date. You can browse these directories to recover the file you want.
